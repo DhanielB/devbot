@@ -20,6 +20,19 @@ def translate_text(text):
 
     return response.choices[0].text
 
+def autocomplete_text(code):
+    response = openai.Completion.create(
+        engine="text-davinci-002",
+        prompt=code,
+        temperature=0,
+        max_tokens=1500,
+        top_p=1.0,
+        frequency_penalty=0.0,
+        presence_penalty=0.0,
+        stop=["###"]
+    )
+
+    return response.choices[0].text
 
 def explain_code(code):
     response = openai.Completion.create(engine="text-davinci-002",
@@ -57,6 +70,16 @@ class main(discord.Client):
             print(translate_code)
             await message.channel.send(
                 f'{message.author} Consegui traduzir oque você falou está aqui : \n\n{translate_code}'
+            )
+
+        if (message.content.find('/autocomplete') != -1):
+            message_to_complete = message.content.split('/autocomplete', 1)[1]
+            autocomplete_code = autocomplete_text(
+                f"#####Sugest autocompletes for my code###\{message_to_complete}\n###"
+            )
+            print(autocomplete_code)
+            await message.channel.send(
+                f'{message.author} Consegui completar oque você falou está aqui : \n\n{autocomplete_code}'
             )
 
 
