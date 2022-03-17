@@ -76,7 +76,7 @@ class main(discord.Client):
             message_to_complete = message.content.split('/autocomplete', 1)[1]
             autocomplete_code = message_to_complete.rstrip('\n')+autocomplete_text(
                 f"#####Sugest autocompletes for my code###{message_to_complete}\n###"
-            )
+            ).rstrip('\n')
             print(autocomplete_code)
             await message.channel.send(
                 f'{message.author} Consegui completar oque você falou está aqui : \n\n{autocomplete_code}'
