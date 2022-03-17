@@ -79,7 +79,7 @@ class main(discord.Client):
             )
             print(autocomplete_code)
             await message.channel.send(
-                f'{message.author} Consegui completar oque você falou está aqui : \n\n{autocomplete_code.rstrip('\n')}'
+                f'{message.author} Consegui completar oque você falou está aqui : \n\n{autocomplete_code}'
             )
 
 
