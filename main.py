@@ -74,7 +74,7 @@ class main(discord.Client):
 
         if (message.content.find('/autocomplete') != -1):
             message_to_complete = message.content.split('/autocomplete', 1)[1]
-            autocomplete_code = message_to_complete+autocomplete_text(
+            autocomplete_code = autocomplete_text(
                 f"#####Sugest autocompletes for my code###{message_to_complete}\n###"
             )
             print(autocomplete_code)
