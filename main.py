@@ -75,7 +75,7 @@ class main(discord.Client):
         if (message.content.find('/autocomplete') != -1):
             message_to_complete = message.content.split('/autocomplete', 1)[1]
             autocomplete_code = autocomplete_text(
-                f"#####Sugest autocompletes for my code###{message_to_complete}\n###"
+                f"#####Give a sugestion for my try predict my next code and write example of this but this cannot give error###{message_to_complete}###"
             )
             print(autocomplete_code)
             await message.channel.send(
