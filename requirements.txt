@@ -1,4 +1,2 @@
-openai==*
+openai==^0.15.0
 discord==^1.0.1
-translate==*
-googletrans==^3.0.0
