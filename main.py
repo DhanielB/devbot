@@ -63,8 +63,6 @@ class main(discord.Client):
 client = main()
 
 try:
-    client.run('OTUzNjM0NTE3NzQ5NDkzODMx.YjHbWg.ub1LFU8Dc5TswvMqkzWFwTsIp54')
+    client.run('OTUzNjM0NTE3NzQ5NDkzODMx.YjHbWg.RFauWQyuo6rAVS5DDiC8Q93vTJg')
 except discord.errors.HTTPException:
     print("\n\n\nBLOCKED BY RATE LIMITS\nRESTARTING NOW\n\n\n")
-    system("python restart.py")
-    system('kill 1')
