@@ -1,2 +1,2 @@
 openai==0.15.0
-discord==^1.0.1
+discord==1.0.1
