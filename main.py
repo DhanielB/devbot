@@ -5,7 +5,7 @@ from keep_alive import keep_alive
 
 keep_alive()
 
-openai.api_key = "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"
+openai.api_key = "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"
 
 
 def translate_text(text):
